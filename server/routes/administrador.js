@@ -57,12 +57,9 @@ const app = express();
   app.post('/administrador', function (req, res) {
     let body = req.body;
     let usr = new Administrador({
-        _id: req.body._id,
         nombre: body.nombre,
         apellidos: req.body.apellidos,
         email: body.email,
-        direccion: body.direccion,
-        curp: body.curp,
         password: body.password,
     });
 
